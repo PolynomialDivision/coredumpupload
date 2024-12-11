@@ -1,0 +1,12 @@
+diff --git a/lib/net.h b/lib/net.h
+index 61ed37ba..c73be434 100644
+--- a/lib/net.h
++++ b/lib/net.h
+@@ -51,7 +51,6 @@ typedef struct net_addr {
+   u8 pxlen;
+   u16 length;
+   u8 data[20];
+-  u64 align[0];
+ } net_addr;
+ 
+ typedef struct net_addr_ip4 {
