@@ -1,0 +1,17 @@
+diff --git a/proto/bgp/bgp.c b/proto/bgp/bgp.c
+index c18a73fe..3c18f80a 100644
+--- a/proto/bgp/bgp.c
++++ b/proto/bgp/bgp.c
+@@ -2771,5 +2771,12 @@ struct protocol proto_bgp = {
+ 
+ void bgp_build(void)
+ {
++  log(L_WARN "ALIGN: %d %d %d %d %d",
++      (int) _Alignof(net_addr),
++      (int) _Alignof(net_addr_ip4),
++      (int) _Alignof(net_addr_ip6),
++      (int) _Alignof(node),
++      (int) _Alignof(struct bgp_prefix));
++
+   proto_build(&proto_bgp);
+ }
